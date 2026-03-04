@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Arush Mishra - Computer Science Engineering Student | Cybersecurity Enthusiast"
+    />
+    <meta name="theme-color" content="#04070f" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <meta property="og:title" content="Arush Mishra | Cyber Portfolio" />
+    <meta
+      property="og:description"
+      content="I build secure systems, explore vulnerabilities, and solve algorithmic problems."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <title>Arush Mishra | Cyber Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#hero" class="skip-link">Skip to content</a>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path
+          d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Zm8 6 8-5H4l8 5Zm0 2L4 9v8h16V9l-8 5Z"
+        />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <path
+          d="M7 8.5H4V20h3V8.5Zm-1.5-5A1.75 1.75 0 1 0 5.5 7a1.75 1.75 0 0 0 0-3.5ZM20 13c0-3.1-1.7-4.8-4.1-4.8a3.5 3.5 0 0 0-3 1.5V8.5H10V20h3v-6.2c0-1.7.9-2.7 2.2-2.7 1.3 0 1.8.9 1.8 2.7V20h3v-7Z"
+        />
+      </symbol>
+      <symbol id="i-tryhackme" viewBox="0 0 24 24">
+        <path
+          d="M12 2 4 5.5V11c0 5.1 3.4 9.8 8 11 4.6-1.2 8-5.9 8-11V5.5L12 2Zm0 3.1 5 2.2V11c0 3.6-2.2 7.2-5 8.5-2.8-1.3-5-4.9-5-8.5V7.3l5-2.2Zm0 2.4a2.9 2.9 0 0 0-2.9 2.9V12h5.8v-1.6A2.9 2.9 0 0 0 12 7.5Z"
+        />
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path
+          d="m8.2 8.4-4 3.6 4 3.6 1.3-1.5L7.1 12l2.4-2.1-1.3-1.5Zm7.6 0-1.3 1.5 2.4 2.1-2.4 2.1 1.3 1.5 4-3.6-4-3.6ZM10.4 19h2l3.2-14h-2L10.4 19Z"
+        />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path
+          d="M12 2 4 5.5V11c0 5.1 3.4 9.8 8 11 4.6-1.2 8-5.9 8-11V5.5L12 2Zm0 3.1 5 2.2V11c0 3.6-2.2 7.2-5 8.5-2.8-1.3-5-4.9-5-8.5V7.3l5-2.2Z"
+        />
+      </symbol>
+      <symbol id="i-tools" viewBox="0 0 24 24">
+        <path
+          d="m22 19.6-6.3-6.3a4.8 4.8 0 0 1-5.9-5.9l2.5 2.5 1.8-1.8-2.5-2.5a4.8 4.8 0 0 1 5.9 5.9l6.3 6.3-1.8 1.8ZM3 21l5.8-5.8 1.8 1.8L4.8 22.8 3 21Z"
+        />
+      </symbol>
+    </svg>
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <p>Initializing Arush.OS...</p>
+    </div>
+
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+    <div class="scanline" aria-hidden="true"></div>
+    <div class="progress" id="progressBar" aria-hidden="true"></div>
+
+    <header class="header" id="top">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a href="#top" class="brand">Arush<span>.OS</span></a>
+
+        <button
+          type="button"
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#profiles">Profiles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="mainContent">
+      <section class="hero shell" id="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            Computer Science Engineering Student - Lovely Professional University
+          </p>
+          <h1>
+            Hi, I'm
+            <span>Arush Mishra</span>
+          </h1>
+          <p class="role">CSE Student | <span id="typedRole" aria-live="polite"></span></p>
+          <p class="lead">
+            I build secure systems, explore vulnerabilities, and solve algorithmic problems.
+          </p>
+
+          <div class="actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="Arush CV.pdf" class="btn btn-soft" download>Download Resume</a>
+            <a
+              href="https://github.com/Arush7376"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost"
+              >GitHub</a
+            >
+          </div>
+
+          <div class="quick-links">
+            <a href="https://tryhackme.com/p/Chimki" target="_blank" rel="noopener"
+              ><svg class="icon"><use href="#i-tryhackme"></use></svg>TryHackMe</a
+            >
+            <a href="https://leetcode.com/u/Arush1724/" target="_blank" rel="noopener">LeetCode</a>
+            <a href="https://www.linkedin.com/in/arushmishra/" target="_blank" rel="noopener"
+              ><svg class="icon"><use href="#i-linkedin"></use></svg>LinkedIn</a
+            >
+          </div>
+
+          <div class="metrics reveal">
+            <article>
+              <p class="metric-label">Public Repos</p>
+              <p class="metric-value" id="metricRepos">--</p>
+            </article>
+            <article>
+              <p class="metric-label">Followers</p>
+              <p class="metric-value" id="metricFollowers">--</p>
+            </article>
+            <article>
+              <p class="metric-label">Total Stars</p>
+              <p class="metric-value" id="metricStars">--</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" id="avatarPanel" aria-label="Identity chamber">
+          <p class="panel-title">Identity Chamber</p>
+          <div class="avatar-stage" id="avatarStage">
+            <div class="halo h1"></div>
+            <div class="halo h2"></div>
+            <div class="face-orb">
+              <span class="eye left"></span>
+              <span class="eye right"></span>
+              <span class="nose"></span>
+              <span class="mouth"></span>
+            </div>
+            <div class="neck"></div>
+            <div class="torso"></div>
+            <div class="beam"></div>
+          </div>
+
+          <ul class="panel-list">
+            <li><span>01</span> Web App Security</li>
+            <li><span>02</span> Packet &amp; Traffic Analysis</li>
+            <li><span>03</span> Ethical Hacking Labs</li>
+            <li><span>04</span> Problem Solving Mindset</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section shell" id="about">
+        <div class="head reveal">
+          <p class="eyebrow">Profile</p>
+          <h2>About Me</h2>
+        </div>
+        <article class="card reveal">
+          <p>
+            I am a Computer Science Engineering student based in India at
+            <strong>Lovely Professional University</strong>, focused on cybersecurity and software
+            engineering. I enjoy ethical hacking, secure architecture, and building practical tools
+            that solve real technical problems with reliability and precision.
+          </p>
+        </article>
+      </section>
+
+      <section class="section shell" id="skills">
+        <div class="head reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Skill Matrix</h2>
+        </div>
+
+        <div class="grid skills-grid">
+          <article class="card reveal" data-tilt>
+            <h3>Programming</h3>
+            <div class="chips">
+              <span
+                ><svg class="chip-icon"><use href="#i-code"></use></svg>C++</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-code"></use></svg>Python</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-code"></use></svg>JavaScript</span
+              >
+              <span
+              ><svg class="chip-icon"><use href="#i-code"></use></svg>Java</span
+              >
+            </div>
+          </article>
+          <article class="card reveal" data-tilt>
+            <h3>Cybersecurity</h3>
+            <div class="chips">
+              <span
+                ><svg class="chip-icon"><use href="#i-shield"></use></svg>SQL Injection</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-shield"></use></svg>Web Security</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-shield"></use></svg>Burp Suite</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-shield"></use></svg>Nmap</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-shield"></use></svg>Wireshark</span
+              >
+            </div>
+          </article>
+          <article class="card reveal" data-tilt>
+            <h3>Tools</h3>
+            <div class="chips">
+              <span
+                ><svg class="chip-icon"><use href="#i-tools"></use></svg>Git</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-tools"></use></svg>Linux</span
+              >
+              <span
+                ><svg class="chip-icon"><use href="#i-tools"></use></svg>GitHub</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="projects">
+        <div class="head reveal">
+          <p class="eyebrow">Builds</p>
+          <h2>Project Constellation</h2>
+        </div>
+
+        <p class="sub-note reveal">
+          Auto-synced from
+          <a href="https://github.com/Arush7376" target="_blank" rel="noopener"
+            >github.com/Arush7376</a
+          >
+          - <span id="projectCount">0</span> repositories
+        </p>
+
+        <div class="project-filters reveal" id="projectFilters"></div>
+
+        <div class="grid projects-grid" id="projectsGrid">
+          <article class="card reveal">
+            <h3>Loading repositories...</h3>
+            <p>Syncing projects from GitHub API.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="certifications">
+        <div class="head reveal">
+          <p class="eyebrow">Credentials</p>
+          <h2>Certifications</h2>
+        </div>
+
+        <div class="grid cert-grid">
+          <article class="card cert reveal">TryHackMe Security Certification</article>
+          <article class="card cert reveal">Object Oriented Programming in C++</article>
+          <article class="card cert reveal">Network Cable Certification</article>
+          <article class="card cert reveal">Certified Ethical Hacker (In Progress)</article>
+        </div>
+      </section>
+
+      <section class="section shell" id="profiles">
+        <div class="head reveal">
+          <p class="eyebrow">Presence</p>
+          <h2>Profiles</h2>
+        </div>
+
+        <div class="grid profile-grid">
+          <article class="card profile reveal">
+            <p class="small">GitHub</p>
+            <h3>Arush7376</h3>
+            <p>Open-source projects, security builds, and developer experiments.</p>
+            <a
+              href="https://github.com/Arush7376"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+              >Open GitHub</a
+            >
+          </article>
+          <article class="card profile reveal">
+            <p class="small">TryHackMe</p>
+            <h3>Chimki</h3>
+            <p>Hands-on security rooms with real attack and defense practice workflows.</p>
+            <a
+              href="https://tryhackme.com/p/Chimki"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-soft"
+              >Open TryHackMe</a
+            >
+          </article>
+          <article class="card profile reveal">
+            <p class="small">LeetCode</p>
+            <h3>Arush1724</h3>
+            <p>Consistent DSA training and algorithmic problem solving for interview readiness.</p>
+            <a
+              href="https://leetcode.com/u/Arush1724/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-soft"
+              >Open LeetCode</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="contact">
+        <div class="head reveal">
+          <p class="eyebrow">Connect</p>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="grid contact-grid">
+          <article class="card reveal">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:arushmishra1726@gmail.com">arushmishra1726@gmail.com</a>
+            </p>
+            <p>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/Arush7376" target="_blank" rel="noopener"
+                >github.com/Arush7376</a
+              >
+            </p>
+            <p>
+              <strong>TryHackMe:</strong>
+              <a href="https://tryhackme.com/p/Chimki" target="_blank" rel="noopener"
+                >tryhackme.com/p/Chimki</a
+              >
+            </p>
+            <p>
+              <strong>LeetCode:</strong>
+              <a href="https://leetcode.com/u/Arush1724/" target="_blank" rel="noopener"
+                >leetcode.com/u/Arush1724</a
+              >
+            </p>
+            <p>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/arushmishra/" target="_blank" rel="noopener"
+                >linkedin.com/in/arushmishra</a
+              >
+            </p>
+            <div class="contact-icons">
+              <a href="mailto:arushmishra1726@gmail.com"
+                ><svg class="icon"><use href="#i-mail"></use></svg>Email</a
+              >
+              <a href="https://www.linkedin.com/in/arushmishra/" target="_blank" rel="noopener"
+                ><svg class="icon"><use href="#i-linkedin"></use></svg>LinkedIn</a
+              >
+              <a href="https://tryhackme.com/p/Chimki" target="_blank" rel="noopener"
+                ><svg class="icon"><use href="#i-tryhackme"></use></svg>TryHackMe</a
+              >
+            </div>
+          </article>
+
+          <form class="card form reveal" id="contactForm" action="#" method="post">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <p>&copy; 2026 Arush Mishra. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="portfolio.config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

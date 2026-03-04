@@ -1,0 +1,28 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Web Vulnerability Scanner</title>
+  <desc id="d">Abstract vulnerability scan interface</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1325"/>
+      <stop offset="100%" stop-color="#1a1027"/>
+    </linearGradient>
+    <linearGradient id="warn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7d7d"/>
+      <stop offset="100%" stop-color="#ffbe5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="24" fill="url(#bg)"/>
+  <rect x="70" y="72" width="660" height="276" rx="16" fill="#0f1d37" stroke="#3a5e93"/>
+  <rect x="70" y="72" width="660" height="42" rx="16" fill="#132747"/>
+  <circle cx="98" cy="93" r="7" fill="#ff7070"/>
+  <circle cx="121" cy="93" r="7" fill="#ffbe5a"/>
+  <circle cx="144" cy="93" r="7" fill="#55f5d8"/>
+  <rect x="102" y="142" width="280" height="22" rx="8" fill="#1d3867"/>
+  <rect x="102" y="177" width="430" height="16" rx="6" fill="#204170"/>
+  <rect x="102" y="203" width="390" height="16" rx="6" fill="#204170"/>
+  <rect x="102" y="229" width="300" height="16" rx="6" fill="#204170"/>
+  <rect x="548" y="142" width="152" height="146" rx="10" fill="#141d31" stroke="#69476d"/>
+  <path d="M624 174l25 43h-50z" fill="url(#warn)"/>
+  <rect x="580" y="232" width="88" height="16" rx="6" fill="#2d2138"/>
+  <text x="102" y="40" fill="#d8e8ff" font-family="monospace" font-size="28">Web Vulnerability Scanner</text>
+</svg>

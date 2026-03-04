@@ -1,0 +1,25 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">SpeedSync</title>
+  <desc id="d">Abstract network speed aggregation artwork</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081326"/>
+      <stop offset="100%" stop-color="#0b1e3f"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#49a2ff"/>
+      <stop offset="100%" stop-color="#58f2e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="24" fill="url(#bg)"/>
+  <g opacity="0.15" stroke="#8fc2ff">
+    <path d="M0 70h800M0 140h800M0 210h800M0 280h800M0 350h800"/>
+    <path d="M100 0v420M200 0v420M300 0v420M400 0v420M500 0v420M600 0v420M700 0v420"/>
+  </g>
+  <circle cx="160" cy="210" r="58" fill="#11325f" stroke="#4aa9ff"/>
+  <circle cx="400" cy="110" r="58" fill="#11325f" stroke="#4aa9ff"/>
+  <circle cx="400" cy="315" r="58" fill="#11325f" stroke="#4aa9ff"/>
+  <circle cx="640" cy="210" r="64" fill="#102746" stroke="#58f2e1"/>
+  <path d="M218 210h120L400 110l62 0M218 210h120L400 315h62M458 110h120M458 315h120" stroke="url(#flow)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="40" y="52" fill="#beddff" font-family="monospace" font-size="28">SpeedSync / Multi-Network Merge</text>
+</svg>

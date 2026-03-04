@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Network Packet Sniffer</title>
+  <desc id="d">Abstract packet analyzer waveform</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081628"/>
+      <stop offset="100%" stop-color="#0f243c"/>
+    </linearGradient>
+    <linearGradient id="sig" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#50c2ff"/>
+      <stop offset="100%" stop-color="#55f4dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="24" fill="url(#bg)"/>
+  <rect x="64" y="70" width="672" height="286" rx="18" fill="#0b1629" stroke="#2f5588"/>
+  <g opacity="0.14" stroke="#7db0ff">
+    <path d="M64 120h672M64 170h672M64 220h672M64 270h672M64 320h672"/>
+    <path d="M120 70v286M200 70v286M280 70v286M360 70v286M440 70v286M520 70v286M600 70v286M680 70v286"/>
+  </g>
+  <path d="M80 250L130 250L160 145L220 300L280 175L340 240L385 210L430 280L470 140L530 240L590 175L630 225L680 190L720 220" stroke="url(#sig)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="140" r="8" fill="#55f4dc"/>
+  <circle cx="280" cy="175" r="8" fill="#50c2ff"/>
+  <text x="64" y="42" fill="#cde7ff" font-family="monospace" font-size="28">Packet Sniffer / Traffic Analysis</text>
+</svg>
