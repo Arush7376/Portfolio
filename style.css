@@ -691,7 +691,18 @@ h3 {
 }
 
 .cert {
-  font-weight: 700;
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+}
+
+.cert h3 {
+  margin-bottom: 0.1rem;
+}
+
+.cert-btn {
+  margin-top: 0.35rem;
+  justify-self: start;
 }
 
 .small {
