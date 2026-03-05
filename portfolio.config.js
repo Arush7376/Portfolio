@@ -7,7 +7,11 @@ window.PORTFOLIO_CONFIG = {
     email: "arushmishra1726@gmail.com",
   },
   hero: {
-    typedRoles: ["Cybersecurity Enthusiast", "Ethical Hacking Learner", "Problem Solver"],
+    typedRoles: [
+      "Cybersecurity Enthusiast",
+      "Ethical Hacking Learner",
+      "Problem Solver",
+    ],
   },
   github: {
     maxRepos: 100,
