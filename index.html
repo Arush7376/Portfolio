@@ -66,11 +66,16 @@
     </svg>
 
     <div class="preloader" id="preloader" aria-hidden="true">
-      <p>Initializing Arush.OS...</p>
+      <p>Initializing Arush....</p>
     </div>
 
     <canvas id="bgCanvas" aria-hidden="true"></canvas>
     <div class="scanline" aria-hidden="true"></div>
+    <div class="ambient-orbs" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+    </div>
     <div class="progress" id="progressBar" aria-hidden="true"></div>
 
     <header class="header" id="top">
@@ -92,6 +97,7 @@
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievements">Achievements</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#certificates">All Certificates</a></li>
@@ -105,13 +111,13 @@
       <section class="hero shell" id="hero">
         <div class="hero-copy reveal">
           <p class="eyebrow">
-            Computer Science Engineering Student - Lovely Professional University
+            Cybersecurity Enthusiast - Secure Systems & Ethical Hacking
           </p>
           <h1>
             Hi, I'm
             <span>Arush Mishra</span>
           </h1>
-          <p class="role">CSE Student | <span id="typedRole" aria-live="polite"></span></p>
+          <p class="role">Cybersecurity | <span id="typedRole" aria-live="polite"></span></p>
           <p class="lead">
             I build secure systems, explore vulnerabilities, and solve algorithmic problems.
           </p>
@@ -156,18 +162,13 @@
 
         <aside class="hero-panel reveal" id="avatarPanel" aria-label="Identity chamber">
           <p class="panel-title">Identity Chamber</p>
-          <div class="avatar-stage" id="avatarStage">
-            <div class="halo h1"></div>
-            <div class="halo h2"></div>
-            <div class="face-orb">
-              <span class="eye left"></span>
-              <span class="eye right"></span>
-              <span class="nose"></span>
-              <span class="mouth"></span>
-            </div>
-            <div class="neck"></div>
-            <div class="torso"></div>
-            <div class="beam"></div>
+          <div class="avatar-stage photo-stage" id="avatarStage">
+            <img
+              src="Formalphoto.jpg"
+              alt="Arush Mishra formal photo"
+              class="identity-photo"
+              loading="eager"
+            />
           </div>
 
           <ul class="panel-list">
@@ -186,10 +187,11 @@
         </div>
         <article class="card reveal">
           <p>
-            I am a Computer Science Engineering student based in India at
-            <strong>Lovely Professional University</strong>, focused on cybersecurity and software
-            engineering. I enjoy ethical hacking, secure architecture, and building practical tools
-            that solve real technical problems with reliability and precision.
+            I am <strong>Arush Mishra</strong>, a Computer Science Engineer focused on <strong>cybersecurity and secure software engineering</strong>. My work centers on understanding system internals, identifying vulnerabilities, and applying security-first principles to the design and development of modern software systems.
+            <br /><br />
+            My interests span <strong>ethical hacking, network security, and building reliable software solutions</strong> that address real-world technical challenges. I emphasize <strong>clean architecture, logical problem-solving, and maintainable code</strong>, ensuring that the systems I build are efficient, scalable, and resilient.
+            <br /><br />
+            With a strong focus on <strong>secure system design and defensive security practices</strong>, I aim to contribute to the development of technology that is not only powerful and high-performing but also <strong>secure by design</strong>.
           </p>
         </article>
       </section>
@@ -251,6 +253,39 @@
                 ><svg class="chip-icon"><use href="#i-tools"></use></svg>GitHub</span
               >
             </div>
+          </article>
+          <article class="card reveal" data-tilt>
+            <h3>Soft Skills</h3>
+            <div class="chips">
+              <span>Analytical Thinking</span>
+              <span>Problem Solving</span>
+              <span>Technical Communication</span>
+              <span>Team Collaboration</span>
+              <span>Adaptability</span>
+              <span>Time Management</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="achievements">
+        <div class="head reveal">
+          <p class="eyebrow">Milestones</p>
+          <h2>Achievements</h2>
+        </div>
+
+        <div class="grid skills-grid">
+          <article class="card reveal">
+            <h3>LeetCode</h3>
+            <p>Solved 200+ questions on LeetCode.</p>
+          </article>
+          <article class="card reveal">
+            <h3>TryHackMe</h3>
+            <p>Completed 80+ rooms on TryHackMe.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Advent of Cyber</h3>
+            <p>Successfully solved Advent of Cyber 2025.</p>
           </article>
         </div>
       </section>
@@ -327,13 +362,21 @@
       <section class="section shell" id="certificates">
         <div class="head reveal">
           <p class="eyebrow">Certificate Library</p>
-          <h2>All Certificates</h2>
+          <h2>Certificates</h2>
         </div>
 
         <div class="grid cert-grid">
           <article class="card cert reveal">
             <p class="small">AI Engineering</p>
             <h3>ChatGPT-4 Prompt Engineering</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/chatgpt4%20prompt%20engineering.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="ChatGPT-4 Prompt Engineering certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Covered advanced prompting patterns, structured prompting, and practical workflow
               optimization for AI-assisted development.
@@ -349,6 +392,14 @@
           <article class="card cert reveal">
             <p class="small">Programming Foundations</p>
             <h3>Data Structure and Algorithm</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/Data%20Structure%20and%20Algorithm.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="Data Structure and Algorithm certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Focused on core data structures, complexity analysis, and algorithmic thinking for
               efficient problem solving.
@@ -365,6 +416,14 @@
           <article class="card cert reveal">
             <p class="small">Automation</p>
             <h3>Formal Automation</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/formalAutomation.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="Formal Automation certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Built understanding of structured automation practices and process reliability in
               technical systems.
@@ -381,6 +440,14 @@
           <article class="card cert reveal">
             <p class="small">Generative AI</p>
             <h3>GPT and More</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/gptandmore.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="GPT and More certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Explored GPT-based tooling, practical AI use cases, and responsible integration in
               development workflows.
@@ -397,6 +464,14 @@
           <article class="card cert reveal">
             <p class="small">Object-Oriented Design</p>
             <h3>OOPS in C++</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/oops.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="OOPS in C++ certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Strengthened skills in classes, inheritance, polymorphism, and modular software design
               using C++.
@@ -413,6 +488,14 @@
           <article class="card cert reveal">
             <p class="small">Computer Networks</p>
             <h3>Packet Switching</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/packet%20switching.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="Packet Switching certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Demonstrated understanding of packet-switched network behavior, routing flow, and
               traffic fundamentals.
@@ -429,6 +512,14 @@
           <article class="card cert reveal">
             <p class="small">Academic/Peer Learning</p>
             <h3>Peer Coursera Certificate</h3>
+            <div class="cert-preview">
+              <iframe
+                src="Certificates/peer%20coursera.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                title="Peer Coursera certificate preview"
+                class="cert-preview-frame"
+                loading="lazy"
+              ></iframe>
+            </div>
             <p>
               Completed peer-driven learning activities with practical exercises and structured
               assessment milestones.
@@ -443,40 +534,16 @@
           </article>
 
           <article class="card cert reveal">
-            <p class="small">Core CSE</p>
-            <h3>Portfolio CSE Certification</h3>
-            <p>
-              Highlights coursework and technical competency across foundational computer science
-              engineering topics.
-            </p>
-            <a
-              href="Certificates/portfolio%20cse.pdf"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-soft cert-btn"
-              >View Certificate</a
-            >
-          </article>
-
-          <article class="card cert reveal">
-            <p class="small">Programming Practice</p>
-            <h3>PP New CSE Certification</h3>
-            <p>
-              Demonstrates continued hands-on coding practice with focus on problem solving and
-              implementation quality.
-            </p>
-            <a
-              href="Certificates/pp%20new%20cse.pdf"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-soft cert-btn"
-              >View Certificate</a
-            >
-          </article>
-
-          <article class="card cert reveal">
             <p class="small">Programming Language</p>
             <h3>Python Certificate</h3>
+            <div class="cert-preview">
+              <img
+                src="Certificates/python%20certificate%20for%20.png"
+                alt="Python certificate preview"
+                class="cert-preview-image"
+                loading="lazy"
+              />
+            </div>
             <p>
               Validates Python fundamentals including syntax fluency, logic building, and practical
               script development.
@@ -493,6 +560,14 @@
           <article class="card cert reveal">
             <p class="small">Cybersecurity</p>
             <h3>Ethical Hacking Certificate</h3>
+            <div class="cert-preview">
+              <img
+                src="Certificates/RTP-20240203-EH049.png"
+                alt="Ethical Hacking certificate preview"
+                class="cert-preview-image"
+                loading="lazy"
+              />
+            </div>
             <p>
               Focused on ethical hacking methodology, vulnerability assessment, and defensive
               security mindset.

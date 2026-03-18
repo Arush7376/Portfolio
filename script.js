@@ -23,6 +23,7 @@ const roleWords = heroConfig.typedRoles || [
 const projectFilters = document.getElementById("projectFilters");
 const projectsGrid = document.getElementById("projectsGrid");
 const projectCount = document.getElementById("projectCount");
+const heroName = document.querySelector(".hero-copy h1 span");
 
 let allRepos = [];
 let activeFilter = "All";
@@ -58,6 +59,11 @@ function typeLoop() {
 }
 
 typeLoop();
+
+if (heroName) {
+  heroName.classList.add("glitch-title");
+  heroName.setAttribute("data-text", heroName.textContent || "Arush Mishra");
+}
 
 if (menuBtn && navLinks) {
   menuBtn.addEventListener("click", () => {
@@ -132,6 +138,8 @@ function attachTilt(card, strength = 6) {
     const rect = card.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
     const y = 0.5 - (event.clientY - rect.top) / rect.height;
+    card.style.setProperty("--spot-x", `${(x + 0.5) * 100}%`);
+    card.style.setProperty("--spot-y", `${(0.5 - y) * 100}%`);
     card.style.transform = `rotateX(${y * strength}deg) rotateY(${x * strength}deg)`;
   };
 
@@ -144,6 +152,96 @@ function attachTilt(card, strength = 6) {
 }
 
 document.querySelectorAll("[data-tilt]").forEach((card) => attachTilt(card, 5.5));
+
+function setupCardSpotlights() {
+  if (reduceMotion) return;
+  document.querySelectorAll(".card, .hero-panel").forEach((panel) => {
+    panel.style.setProperty("--spot-x", "50%");
+    panel.style.setProperty("--spot-y", "50%");
+
+    panel.addEventListener("mousemove", (event) => {
+      const rect = panel.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      panel.style.setProperty("--spot-x", `${x}%`);
+      panel.style.setProperty("--spot-y", `${y}%`);
+    });
+  });
+}
+
+function setupHeroParallax() {
+  if (reduceMotion || !heroName) return;
+  const heroCopy = document.querySelector(".hero-copy");
+  if (!heroCopy) return;
+
+  window.addEventListener(
+    "mousemove",
+    (event) => {
+      const xRatio = event.clientX / window.innerWidth - 0.5;
+      const yRatio = event.clientY / window.innerHeight - 0.5;
+      heroName.style.transform = `translate(${xRatio * 14}px, ${yRatio * 7}px)`;
+      heroCopy.style.setProperty("--hero-glow-x", `${(xRatio + 0.5) * 100}%`);
+      heroCopy.style.setProperty("--hero-glow-y", `${(yRatio + 0.5) * 100}%`);
+    },
+    { passive: true }
+  );
+}
+
+function setupMagneticElements() {
+  if (reduceMotion) return;
+  const targets = document.querySelectorAll(".btn, .quick-links a");
+  targets.forEach((target) => {
+    target.addEventListener("mousemove", (event) => {
+      const rect = target.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 12;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 10;
+      target.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    target.addEventListener("mouseleave", () => {
+      target.style.transform = "";
+    });
+  });
+}
+
+function setupCursorGlow() {
+  if (reduceMotion) return;
+  const glow = document.createElement("div");
+  glow.className = "cursor-glow";
+  document.body.append(glow);
+
+  let currentX = window.innerWidth / 2;
+  let currentY = window.innerHeight / 2;
+  let targetX = currentX;
+  let targetY = currentY;
+  let running = true;
+
+  const animate = () => {
+    if (!running) return;
+    currentX += (targetX - currentX) * 0.13;
+    currentY += (targetY - currentY) * 0.13;
+    glow.style.transform = `translate(${currentX}px, ${currentY}px)`;
+    requestAnimationFrame(animate);
+  };
+
+  window.addEventListener(
+    "mousemove",
+    (event) => {
+      targetX = event.clientX;
+      targetY = event.clientY;
+      glow.classList.add("active");
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("mouseout", () => glow.classList.remove("active"));
+  animate();
+}
+
+setupMagneticElements();
+setupCursorGlow();
+setupCardSpotlights();
+setupHeroParallax();
 
 function animateCount(element, value) {
   if (!element || Number.isNaN(value)) return;
