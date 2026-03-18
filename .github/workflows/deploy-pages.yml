@@ -30,6 +30,7 @@ jobs:
           cp script.js _site/
           cp portfolio.config.js _site/
           cp "Arush CV.pdf" _site/
+          cp Formalphoto.jpg _site/
           cp -r assets _site/
           cp -r Certificates _site/
           touch _site/.nojekyll

@@ -291,6 +291,7 @@ a {
 .hero-copy {
   --hero-glow-x: 35%;
   --hero-glow-y: 28%;
+
   position: relative;
 }
 
@@ -954,7 +955,9 @@ h3 {
   border-radius: 12px;
   border: 1px solid rgba(120, 168, 253, 0.25);
   margin-bottom: 0.8rem;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .project:hover .project-image {
